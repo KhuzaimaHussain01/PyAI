@@ -1,0 +1,28 @@
+
+text = input("Enter your text: ")
+
+# Convert everything to lowercase
+text = text.lower()
+
+# Separate the text into individual words
+words = text.split()
+
+# Count total words
+word_count = len(words)
+
+# Calculate frequency of each word
+frequency = {}
+
+for word in words:
+    if word in frequency:
+        frequency[word] += 1
+    else:
+        frequency[word] = 1
+
+# Display results
+print("\nTotal number of words:", word_count)
+
+print("\nWord Frequencies:")
+
+for word, count in frequency.items():
+    print(word, ":", count)
